@@ -22,3 +22,6 @@ jobs:
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
+      - name: Testing skip functionality
+        if: contains(join(github.event.commits.*.message)), '#skip' }}
+        run: echo version was skipped
