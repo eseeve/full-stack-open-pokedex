@@ -32,3 +32,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: full-stack-seeve-pokedex
           heroku_email: elias.seeve@gmail.com
+          healthcheck: "https://full-stack-seeve-pokedex.herokuapp.com/health"
+          checkstring: "ok"
