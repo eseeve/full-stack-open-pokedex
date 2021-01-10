@@ -1,1 +1,1 @@
-web: npm run error
+web: npm run start-prod
