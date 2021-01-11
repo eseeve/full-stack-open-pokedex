@@ -2,8 +2,8 @@ name: Healthcheck pipeline
 
 on:
   schedule:
-    - cron:  '*/5 * * * *'
-    
+    - cron:  '* */24 * * *'
+
 jobs:
   healthcheck-pipeline:
     runs-on: ubuntu-18.04
