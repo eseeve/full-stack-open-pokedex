@@ -58,19 +58,19 @@ jobs:
   # EXERCISE 3.1 in devops with docker 2021
   docker-build:
     runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2 
+    steps:
+    - uses: actions/checkout@v2 
 
-      - name: Login to DockerHub
-        uses: docker/login-action@v1 
-        with: 
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-              
-      - name: Build and push
-        uses: gonuit/heroku-docker-deploy@v1.3.2
-        with:
-          email: elias.seeve@gmail.com
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: docker-seeve-pokedex
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with: 
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+            
+    - name: Build and push
+      uses: gonuit/heroku-docker-deploy@v1.3.2
+      with:
+        email: elias.seeve@gmail.com
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        heroku_app_name: docker-seeve-pokedex
           
